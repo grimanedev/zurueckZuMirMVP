@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zurück zu mir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!--<button id="menuButton" class="button-icons" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+            </svg>
+        </button>-->
+        <h1>Zurück zu mir</h1>
+        <!--<button id="settingsButton" class="button-icons" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path>
+            </svg>
+        </button>-->
+    </header>
+    <main>
+        <section id="homeScreen" class="active">
+            <!--Start Bildschirm-->
+            <div class="distressCard">
+                <p>Wie ist deine Anspannung grade?</p>
+                <div id="distressValue">50</div>
+                <input 
+                type="range" 
+                id="distressScale" 
+                name="Anspannung" 
+                min="0" 
+                max="100" 
+                step="1" 
+                value="50"
+                oninput="distressValue.textContent=this.value">
+            </div>
+            <div class="cards">
+                <Button id="checkinCard" class="card" type="button">
+                    <p>Check-in</p>
+                </Button>
+                <button id="skillsCard" class="card" type="button">
+                    <p>Skills Liste</p>
+                </button>
+            </div>
+            <div>
+                <!--<button id="mySkillsCard" class="card" type="button">
+                    Meine Skills
+                </button>-->
+            </div>
+            <div class="safeSpace">
+                <button id="safeSpaceButton" class="button-icons" type="button">
+                    <p>Safe Space</p>
+                </button>
+            </div>
+        </section>
+        <section id="transitionScreen" class="screen">
+            <!--Screen transition Safe Space-->
+            <h2>Wechsel in den Safe Space</h2>
+            <p class="transitionText">Im Safe Space Modus werden deine Benachrichtigungen ausgeschaltet und dein Bildschirm abgedunkelt.
+                Du kannst diesen Modus zu jederzeit beenden. Klicke dafür den Button: 'Ich bin bereit weiter zu gehen' </p>
+            <img class="bubbles" src="bubbles.png">
+            <p class="bubblesText">Hi, ich bin Bubbles.</p>
+        </section>
+        <section id="safeSpaceScreen" class="screen">
+            <!--Safe Space Modus-->
+            <h2>Safe Space</h2> 
+            <p class="safeSpaceText">
+                Wenn du magst, können wir ein paar tiefe Atemzüge zusammen machen.
+            </p>
+            <img class="bubbles" src="bubbles.png"> 
+            <div class="circle"></div>
+            <button id="exitSafeSpaceButton" class="button-icons" type="button">
+                <p class="safeSpaceText">
+                    Ich bin bereit weiter zu gehen
+                </p>
+            </button>  
+        </section>
+                <section id="transitionScreenExit" class="screen">
+            <!--Screen transition Safe Space exit-->
+            <h2>Wechsel in den Standard Modus</h2>
+            <p class="transitionText">Deine Benachrichtigungen werden wieder eingeschaltet und deine Bildschirmhelligkeit erhöht.
+                Du kannst den Safe Space Modus zu jederzeit wieder starten. Klicke dafür den Button: 'Safe Space'</p>
+            <img class="bubbles" src="bubbles.png">
+            <p class="bubblesText">Schön das du hier warst.</p>
+        </section>
+        <section id="checkinScreen">
+            <!--Check-in Seite-->
+            <h2>Checkin</h2>
+            <div class="checkinQuestionContainer">
+                <div class="questionCard">
+                    <label>Gab es etwas, das dich heute bewegt hat?</label>
+                    <input type="text" id="qCard1input" class="qCardInputBox" placeholder="z.B. ein Streit, ein Termin, Musik gehört, nichts Besonderes">
+                </div>
+            
+                <div class="questionCard">
+                    <label>Welche gefühle waren heute da?</label>
+                    <input type="text" id="qCard2input" class="qCardInputBox" placeholder="z.B. Angst, Trauer, Freude, Ärger, Leere...">
+                </div>
+
+                <div class="questionCard">
+                    <label>Wie hat sich dein Körper heute angefühlt?</label>
+                    <input type="text" id="qCard3input" class="qCardInputBox" placeholder="z.B. erschöpft, unruhig, entspannt, angespannt, schwer...">
+                </div>
+
+                <div class="questionCard">
+                    <label>Welche Gedanken waren heute präsent?</label>
+                    <input type="text" id="qCard4input" class="qCardInputBox" placeholder="z.B. selbstkritisch, sorgenvoll, klar, überfordert, neutral...">
+                </div>
+
+                <div class="questionCard">
+                    <label>Was hat dir heute etwas halt gegeben, was hat gefehlt?</label>
+                    <input type="text" id="qCard5input" class="qCardInputBox" placeholder="z.B. Musik, Rückzug, einer Freundin schreiben, nichts, hätte Ruhe gebraucht...">
+                </div>
+            </div>
+            
+
+        </section>
+        <section id="skillsScreen">
+            <!--Skills Sammlung-->
+            <h2>Skills Sammlung</h2>
+        </section>
+        <section id="statsScreen">
+            <!--Statistik Seite-->
+            <h2>Statistik</h2>
+        </section>
+        <section id="settingsScreen">
+            <!--Einstellungen-->
+            <h2>Einstellungen</h2>
+
+        </section>
+        <section id="contactScreen">
+            <!--Notfall-Kontakte-->
+            <h2>Notfall Kontakte</h2>
+            <p>Wusstest du, dass schon 8 Minuten mit einer vertrauten Person zu reden helfen können, 
+                sich weniger einsam zu fühlen, Halt zu finden und schwierige Momente besser zu bewältigen?
+            </p>
+            <p>Hier kannst du deine Notfallkontake speichern.
+                Wenn du möchtest könnt ihr gemeinsam einen 8-Minuten-SOS-Code ausmachen, 
+                der soviel bedeutet wie: "Bitte melde dich, ich brauche grade Verbindung und Unterstützung."
+                </p>
+            <div class="contactList">
+                <!-- Form 2 -->
+                <form id="contactForm">
+                    <label>Name:</label>
+                    <input type="text" id="c1NameInput" placeholder="Name">
+
+                    <label>Telefonnummer:</label>
+                    <input type="text" id="c1PhoneInput" placeholder="Telefonnummer">
+
+                    <label>SOS-Code:</label>
+                    <input type="text" id="c1CodeInput" placeholder="z.B. 'Hast du 8 Minuten?'">
+
+                    <button onclick="saveContact1()">Speichern</button>
+                </form>
+                <!-- Form 2 -->
+                <form id="contactForm2">
+                    <label>Name:</label>
+                    <input type="text" id="c2NameInput" placeholder="Name">
+
+                    <label>Telefonnummer:</label>
+                    <input type="text" id="c2PhoneInput" placeholder="Telefonnummer">
+
+                    <label>SOS-Code:</label>
+                    <input type="text" id="c2CodeInput" placeholder="z.B. 'Hast du 8 Minuten?'">
+
+                    <button onclick="saveContact2()">Speichern</button>
+                </form>
+            </div>       
+        </section>
+    </main>
+    <footer>
+        <button id="contactButton" class="button-icons" type="button"> <!--Notfall-Kontakte Button-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M144.27,45.93a8,8,0,0,1,9.8-5.66,86.22,86.22,0,0,1,61.66,61.66,8,8,0,0,1-5.66,9.8A8.23,8.23,0,0,1,208,112a8,8,0,0,1-7.73-5.94,70.35,70.35,0,0,0-50.33-50.33A8,8,0,0,1,144.27,45.93Zm-2.33,41.8c13.79,3.68,22.65,12.54,26.33,26.33A8,8,0,0,0,176,120a8.23,8.23,0,0,0,2.07-.27,8,8,0,0,0,5.66-9.8c-5.12-19.16-18.5-32.54-37.66-37.66a8,8,0,1,0-4.13,15.46Zm81.94,95.35A56.26,56.26,0,0,1,168,232C88.6,232,24,167.4,24,88A56.26,56.26,0,0,1,72.92,32.12a16,16,0,0,1,16.62,9.52l21.12,47.15,0,.12A16,16,0,0,1,109.39,104c-.18.27-.37.52-.57.77L88,129.45c7.49,15.22,23.41,31,38.83,38.51l24.34-20.71a8.12,8.12,0,0,1,.75-.56,16,16,0,0,1,15.17-1.4l.13.06,47.11,21.11A16,16,0,0,1,223.88,183.08Zm-15.88-2s-.07,0-.11,0h0l-47-21.05-24.35,20.71a8.44,8.44,0,0,1-.74.56,16,16,0,0,1-15.75,1.14c-18.73-9.05-37.4-27.58-46.46-46.11a16,16,0,0,1,1-15.7,6.13,6.13,0,0,1,.57-.77L96,95.15l-21-47a.61.61,0,0,1,0-.12A40.2,40.2,0,0,0,40,88,128.14,128.14,0,0,0,168,216,40.21,40.21,0,0,0,208,181.07Z"></path>
+            </svg>
+        </button>
+        <button id="homeButton" class="button-icons" type="button"> <!--Home Button-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M219.31,108.68l-80-80a16,16,0,0,0-22.62,0l-80,80A15.87,15.87,0,0,0,32,120v96a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V160h32v56a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V120A15.87,15.87,0,0,0,219.31,108.68ZM208,208H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48V120l80-80,80,80Z"></path>
+            </svg>
+        </button>
+        <button id="statsButton" class="button-icons" type="button"> <!--Stats Button-->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                <path d="M640-160v-280h160v280H640Zm-240 0v-640h160v640H400Zm-240 0v-440h160v440H160Z"/>
+            </svg>
+        </button>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>

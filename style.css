@@ -1,0 +1,324 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(15px, 2.5vw, 18px);
+    background-color: rgb(235, 238, 250);
+    color: rgb(88, 94, 140);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    font-size: clamp(22px, 4.5vw, 30px);
+}
+
+button p, div.distressCard p {
+    color: rgb(88, 94, 140);
+    font-size: clamp(17px, 3.6vw, 20px);
+}
+
+/* Header */
+header {
+    background-color: rgb(210, 218, 245);
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+/* Header Buttons */
+header .button-icons {
+    background: none;
+    border: none;
+    color: rgb(88, 94, 140);
+}
+
+/* Header Icons */
+header button svg {
+    width: clamp(22px, 6vw, 32px);
+    height: clamp(22px, 6vw, 32px);
+}
+
+/* Header Title */
+header h1 {
+    margin: 0;
+    font-size: clamp(28px, 6vw, 40px);
+}
+
+/* Main */
+main {
+    flex: 1;
+    flex-direction: column;
+    padding: 16px;
+}
+
+div.distressCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-block: 16px;
+    margin-top: auto;
+    font-size: clamp(17px, 3.6vw, 20px);
+
+    
+    background-color: rgb(210, 218, 240);
+    border: 1px solid rgb(180, 190, 225);
+    border-radius: clamp(10px, 2vw, 25px);
+    height: clamp(100px, 20vw, 200px);
+}
+
+/* Anspannungsskala */
+#distressScale {
+    width: 80%;
+}
+
+div#distressValue {
+    color: rgb(88, 94, 140);
+}
+
+/* Home Screen cards layout*/
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: clamp(12px, 3vw, 24px);
+}
+
+/* Card design */
+.card {
+    background-color: rgb(210, 218, 240);
+    border: 1px solid rgb(180, 190, 225);
+    border-radius: clamp(10px, 2vw, 25px);
+    flex: 1;
+    height: clamp(100px, 30vw, 200px);
+    
+}
+
+/* Checkin Container*/
+.checkinQuestionContainer {
+    padding-right: 4px;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+}
+
+/*Check in Question Cards*/
+.qCardInputBox {
+    width: 70vw;
+    height: clamp(60px, 2vw, 120px);
+    margin: 2px;
+    box-sizing: border-box;
+    resize: vertical;
+    border-radius: clamp(50px, 5vw, 100px);
+}
+
+/* Checkin question box*/
+div.questionCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin: 16px;
+    font-size: clamp(17px, 3.6vw, 20px);
+
+    
+    background-color: rgb(210, 218, 240);
+    border: 1px solid rgb(180, 190, 225);
+    border-radius: clamp(10px, 2vw, 25px);
+    height: clamp(100px, 20vw, 200px);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+div.safeSpace .button-icons {
+    background-color: rgb(140, 155, 210);
+    border: 1px solid rgb(120, 135, 190);
+    border-radius: clamp(10px, 2vw, 25px);
+    height: clamp(50px, 20vw, 150px);
+    margin: 16px;
+    min-width: 80vw;
+}
+
+.safeSpace .button-icons p {
+    color: rgb(235, 238, 250);
+}
+
+
+/* Hide screens*/
+section {
+    display: none;
+}
+
+/* Only show active screen*/
+section.active {
+    display: flex;
+}
+
+/*------------------------------------------------------------Transitions------------------------------------------------------------------*/
+/* transition Safe Space*/
+body#transitionScreen {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+/* transition screen */
+.screen body {
+    flex: 1;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 0;
+    text-align: center;
+}
+
+#transitionScreen {
+    height: 100vh;
+    width: inherit;
+    margin: -16px;
+    background: linear-gradient(
+        to bottom, 
+        rgb(235, 238, 250),
+        rgb(210, 218, 245),
+        rgb(180, 195, 235),
+        rgb(120, 135, 190)
+    );
+}
+
+#transitionScreenExit {
+    height: 100vh;
+    width: inherit;
+    margin: -16px;
+    background: linear-gradient(
+        to bottom, 
+        rgb(180, 195, 235),
+        rgb(150, 165, 205),
+        rgb(120, 135, 190),
+        rgb(90, 105, 155)
+    );
+}
+
+.transitionText {
+    text-align: center;
+    margin: 16px;
+    font-size: clamp(22px, 4.5vw, 30px);
+}
+
+.bubbles{
+    width: clamp(280px, 38vw, 520px);
+    max-height: 40vh;
+    height: auto;
+    object-fit: contain;
+    margin: -32px;
+}
+
+.bubblesText {
+    text-align: center;
+    opacity: 0.65;
+    font-size: clamp(22px, 4.5vw, 30px);
+}
+
+/*Hide header & Footer during transition*/
+body.hideBar header,
+body.hideBar footer {
+    display: none;
+}
+/*------------------------------------------------------------Safe Space Mode-----------------------------------------------------------------*/
+/* Safe space Modus */
+body.safeSpaceUi header {
+    background-color: rgb(120, 135, 190);
+}
+
+body.safeSpaceUi footer {
+    background-color: rgb(110, 125, 180);
+}
+
+body.safeSpaceUi .button-icons {
+    background-color: none;
+    color: rgb(230, 235, 245);
+}
+
+p.safeSpaceText {
+    color: rgb(230, 235, 245);
+    font-size: clamp(17px, 3.6vw, 20px);
+    text-align: center;
+}
+
+body.safeSpaceUi button#exitSafeSpaceButton {
+    background-color: rgb(110, 125, 180);
+    color: rgb(230, 235, 245);
+    border: 1px solid rgb(95, 125, 180);
+    border-radius: clamp(10px, 2vw, 25px);
+    height: clamp(50px, 20vw, 150px);
+    margin: 16px;
+    min-width: 80vw;
+}
+
+body.safeSpaceUi {
+    background-color: rgb(90, 105, 160);
+    color: rgb(230, 235, 245);
+}
+
+body.safeSpaceUi .circle {
+    width: clamp(90px, 30vw, 160px);
+    aspect-ratio: 1 / 1;
+    border: 1px solid rgb(230, 235, 245);
+    border-radius: 50%;
+    animation: breath 10s ease-in-out 6;
+    margin-bottom: 32px;
+}
+
+@keyframes breath {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/*-------------------------------------------------------------Contact list---------------------------------------------------------------------*/
+div.contactList {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(12px, 3vw, 24px);
+}
+/* Notfall Kontaktformula*/
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 170px;
+    margin-bottom: 10px;
+}
+
+div.contactList button {
+    margin: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(200, 210, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+/* Footer Buttons */
+footer .button-icons {
+    background: none;
+    border: none;
+    color: rgb(88, 94, 140);
+}
+
+/* Footer Icons */
+footer button svg {
+    width: clamp(22px, 7vw, 36px);
+    height: clamp(22px, 7vw, 36px);
+}
